@@ -25,8 +25,9 @@ int main(int argc, char* argv[]) {
 
   /// if you are using an old version of Raisim, you need this line
   world.integrate1();
+  aliengo->getMassMatrix();
 
-  std::cout<<"nonlinearities should be \n"<< aliengo->getNonlinearities({0,0,-9.81}).e()<<std::endl;
+  std::cout<<"nonlinearities should be \n"<< aliengo->getNonlinearities({0,0,-9.81}).e().transpose()<<std::endl;
 
   if((getNonlinearities(gc, gv) - aliengo->getNonlinearities({0,0,-9.81}).e()).norm() < 1e-8)
     std::cout<<"passed "<<std::endl;
