@@ -19,4 +19,6 @@ create_executable(rotation_example_euler_angles src/rotation_example_euler_angle
 
 # exam
 create_executable(midterm_part2 src/midterm_part2.cpp)
+create_executable(final_exam src/final_exam.cpp)
+
 
