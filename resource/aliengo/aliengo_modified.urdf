@@ -433,7 +433,7 @@
                 </geometry>
             </collision>
         </link> -->
-  <joint name="RR_thigh_joint" type="continuous">
+  <joint name="RR_thigh_joint" type="revolute">
     <origin rpy="0 0 0" xyz="0 -0.083 0"/>
     <parent link="RR_hip"/>
     <child link="RR_thigh"/>

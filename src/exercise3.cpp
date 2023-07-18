@@ -3,7 +3,7 @@
 //
 
 #include "raisim/RaisimServer.hpp"
-#include "exercise3_STUDENTID.hpp"
+#include "exercise3_20236014.hpp"
 
 #define _MAKE_STR(x) __MAKE_STR(x)
 #define __MAKE_STR(x) #x
@@ -27,7 +27,8 @@ int main(int argc, char* argv[]) {
   /// if you are using an old version of Raisim, you need this line
   world.integrate1();
 
-  std::cout<<"mass matrix should be \n"<< aliengo->getMassMatrix().e()<<std::endl;
+  //std::cout<<"mass matrix should be \n"<< aliengo->getMassMatrix().e()<<std::endl;
+  //std::cout<<"my mass matrix is \n"<< getMassMatrix(gc) <<std::endl;
 
   if((getMassMatrix(gc) - aliengo->getMassMatrix().e()).norm() < 1e-8)
     std::cout<<"passed "<<std::endl;

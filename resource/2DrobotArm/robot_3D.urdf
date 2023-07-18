@@ -64,7 +64,7 @@
         </inertial>
     </link>
 
-    <joint name="link1Tolink3" type="revolute">
+    <joint name="link2Tolink3" type="revolute">
         <parent link="link2"/>
         <child link="link3"/>
         <origin xyz="0 0 0.3"/>

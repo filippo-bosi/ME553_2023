@@ -7,7 +7,7 @@
 #define __MAKE_STR(x) #x
 
 #include "raisim/RaisimServer.hpp"
-#include "midterm_STUDENTID.hpp"
+#include "midterm_20236014.hpp"
 
 int main(int argc, char* argv[]) {
   auto binaryPath = raisim::Path::setFromArgv(argv[0]);
@@ -28,7 +28,7 @@ int main(int argc, char* argv[]) {
   Eigen::VectorXd gc(cartPole->getGeneralizedCoordinateDim());
   Eigen::VectorXd gv(cartPole->getDOF());
 
-  gc << 0, 0.5;
+  gc << 0.0, 0.5;
   gv << 0, 0;
   cartPole->setState(gc, gv);
 
@@ -40,23 +40,22 @@ int main(int argc, char* argv[]) {
     RS_TIMED_LOOP(world.getTimeStep()*1e6)
 
     cartPole->getState(gc, gv);
+    //std::cout<<cartPole->getMassMatrix().e()<<std::endl;
     if((cartPole->getMassMatrix().e() - getMassMatrix(gc)).norm() < 1e-8) {
       std::cout<<"the mass matrix is correct "<<std::endl;
     } else {
       std::cout<<"the mass matrix is not correct "<<std::endl;
       answerCorrect = false;
     }
-
     server.integrateWorldThreadSafe();
   }
 
-  server.killServer();
-
-  if(answerCorrect) {
+    if(answerCorrect) {
     std::cout<<"\n\nThe solution is correct "<<std::endl;
   } else {
     std::cout<<"\n\nThe solution is not correct "<<std::endl;
   }
+  server.killServer();
 
   return 0;
 }
