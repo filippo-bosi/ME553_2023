@@ -1,5 +1,5 @@
 # ME553_2023
-<img src="https://github.com/filippo-bosi/ME553_2023/assets/25723653/f79f1868-d5cf-4d4b-aeaa-ece66d0ebdf9" width=50%>
+<img src="https://github.com/filippo-bosi/ME553_2023/assets/25723653/f79f1868-d5cf-4d4b-aeaa-ece66d0ebdf9" width=70%>
 
 *Using the Aliengo quadruped robot model, the goal was to compute different parameters with increasing difficulty.*
 
